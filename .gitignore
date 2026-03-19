@@ -13,9 +13,6 @@ yarn-error.log
 logs/
 *.log
 
-# Route logs
-route_log.jsonl
-
 # OS files
 .DS_Store
 Thumbs.db

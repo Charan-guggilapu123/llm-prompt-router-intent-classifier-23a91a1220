@@ -155,6 +155,8 @@ The test suite covers:
 
 Every request appends one JSON object line to `route_log.jsonl`.
 
+`route_log.jsonl` is intentionally included in this repository as a submission artifact.
+
 Each entry contains at least:
 
 - `intent`
@@ -166,6 +168,13 @@ Example:
 
 ```json
 {"timestamp_utc":"2026-03-16T13:00:00.000Z","intent":"code","confidence":0.92,"user_message":"how do i sort a list?","final_response":"..."}
+```
+
+To generate fresh log entries locally:
+
+```bash
+npm run cli -- "help me debug a javascript function"
+npm run cli -- "my paragraph sounds awkward, can you improve clarity?"
 ```
 
 ## Containerization
@@ -182,6 +191,14 @@ docker run --rm -p 3000:3000 prompt-router
 ```bash
 docker compose up --build
 ```
+
+## Submission Artifacts Checklist
+
+- Application code: `src/` and `tests/`
+- Containerization files: `Dockerfile` and `docker-compose.yml`
+- Documentation: `README.md`
+- Environment template: `.env.example` (no secrets)
+- Log artifact: `route_log.jsonl`
 
 ## Notes
 
